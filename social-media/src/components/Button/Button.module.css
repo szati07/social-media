@@ -1,0 +1,12 @@
+.button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 20px;
+}
+
+.submit-button {
+    color: #ffffff;
+    background: #1877f2;
+}
