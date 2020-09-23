@@ -5,7 +5,9 @@ import Button from '../Button/Button';
 import Input from '../Input/Input';
 import styles from './LoginForm.module.css';
 
-interface IFieldValues {
+// styledcomponents, emotion
+
+interface FormValues {
   email?: string;
   password?: string;
 }
@@ -13,29 +15,29 @@ interface IFieldValues {
 
 const LoginForm = () => {
 
-  const onSubmit = (values: IFieldValues) => {
+  const onSubmit = (values: FormValues) => {
     setTimeout(() => {
       console.log(values)
     }, 400)
   };
 
-  const validate = (values: IFieldValues) => {
+  const validate = (values: FormValues) => {
     const {
       email,
       password
     } = values;
 
-    const errors: IFieldValues = {
+    const errors: FormValues = {
     };
 
-    if (email && email.length) {
+    if (email?.length) {
       const isValidEmail = emailValidator(email);
       if (!isValidEmail) {
         errors.email = 'You have entered an invalid email address'
       }
     }
 
-    if (password && password.length) {
+    if (password?.length) {
       const isValidPassword = passwordValidator(password);
       if (!isValidPassword) {
         errors.password = 'You have entered an invalid password.'
