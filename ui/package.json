@@ -6,17 +6,23 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "@types/babel-plugin-macros": "^2.8.3",
     "@types/jest": "^26.0.13",
     "@types/node": "^14.6.4",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
+    "@types/react-relay": "^7.0.12",
+    "babel-plugin-macros": "^2.8.0",
+    "babel-plugin-relay": "^10.0.1",
     "final-form": "^4.20.1",
+    "graphql": "^15.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-final-form-hooks": "^2.0.2",
     "react-relay": "^10.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
+    "relay-config": "^10.0.1",
     "typescript": "^4.0.2"
   },
   "scripts": {
@@ -24,7 +30,9 @@
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "relay": "relay-compiler --src ./src --schema src/schema.graphql --language typescript --artifactDirectory ./src/__generated__"
+
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,5 +48,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "relay-compiler": "^10.0.1",
+    "relay-compiler-language-typescript": "^13.0.1"
   }
 }

@@ -1,0 +1,11 @@
+type Query {
+    allUsers: AllUsers
+}
+
+type AllUsers {
+    nodes: Nodes
+}
+
+type Nodes {
+    name: String
+}
