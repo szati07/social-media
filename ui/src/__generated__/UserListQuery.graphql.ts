@@ -23,50 +23,51 @@ query UserListQuery {
   allUsers {
     nodes {
       name
+      id
     }
   }
 }
 */
 
 const node: ConcreteRequest = (function(){
-var v0 = [
-  {
-    "alias": null,
-    "args": null,
-    "concreteType": "AllUsers",
-    "kind": "LinkedField",
-    "name": "allUsers",
-    "plural": false,
-    "selections": [
-      {
-        "alias": null,
-        "args": null,
-        "concreteType": "Nodes",
-        "kind": "LinkedField",
-        "name": "nodes",
-        "plural": false,
-        "selections": [
-          {
-            "alias": null,
-            "args": null,
-            "kind": "ScalarField",
-            "name": "name",
-            "storageKey": null
-          }
-        ],
-        "storageKey": null
-      }
-    ],
-    "storageKey": null
-  }
-];
+var v0 = {
+  "alias": null,
+  "args": null,
+  "kind": "ScalarField",
+  "name": "name",
+  "storageKey": null
+};
 return {
   "fragment": {
     "argumentDefinitions": [],
     "kind": "Fragment",
     "metadata": null,
     "name": "UserListQuery",
-    "selections": (v0/*: any*/),
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "AllUsers",
+        "kind": "LinkedField",
+        "name": "allUsers",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "concreteType": "Nodes",
+            "kind": "LinkedField",
+            "name": "nodes",
+            "plural": false,
+            "selections": [
+              (v0/*: any*/)
+            ],
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      }
+    ],
     "type": "Query",
     "abstractKey": null
   },
@@ -75,15 +76,46 @@ return {
     "argumentDefinitions": [],
     "kind": "Operation",
     "name": "UserListQuery",
-    "selections": (v0/*: any*/)
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "concreteType": "AllUsers",
+        "kind": "LinkedField",
+        "name": "allUsers",
+        "plural": false,
+        "selections": [
+          {
+            "alias": null,
+            "args": null,
+            "concreteType": "Nodes",
+            "kind": "LinkedField",
+            "name": "nodes",
+            "plural": false,
+            "selections": [
+              (v0/*: any*/),
+              {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "id",
+                "storageKey": null
+              }
+            ],
+            "storageKey": null
+          }
+        ],
+        "storageKey": null
+      }
+    ]
   },
   "params": {
-    "cacheID": "faf87308f0d240d97f093354c4fbb227",
+    "cacheID": "8151e8c029a686751f41c6a94347ead4",
     "id": null,
     "metadata": {},
     "name": "UserListQuery",
     "operationKind": "query",
-    "text": "query UserListQuery {\n  allUsers {\n    nodes {\n      name\n    }\n  }\n}\n"
+    "text": "query UserListQuery {\n  allUsers {\n    nodes {\n      name\n      id\n    }\n  }\n}\n"
   }
 };
 })();

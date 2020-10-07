@@ -3,7 +3,7 @@ type Query {
 }
 
 type AllUsers {
-    nodes: Nodes
+    nodes: [Nodes]
 }
 
 type Nodes {
